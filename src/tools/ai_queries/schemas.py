@@ -1,9 +1,9 @@
-from typing import List, Dict, Literal, TypeVar
+from typing import List, Dict, Literal
 
 from pydantic import BaseModel
 
 
-CONTENT_TYPE = TypeVar("CONTENT_TYPE", List[Dict[str, str] | Dict[str, Dict[str, str]]])
+CONTENT_TYPE = List[Dict[str, str] | Dict[str, Dict[str, str]]]
 
 
 class AzureAIMessage(BaseModel):

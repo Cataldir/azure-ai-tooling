@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: FastAPI",
+            "name": "Python: AI Tools",
             "type": "debugpy",
             "request": "launch",
-            "module": "uvicorn",
+            "program": "${workspaceFolder}\\src\\tools\\main.py",
             "justMyCode": false,
             "autoReload": {
                 "enable": true,
@@ -17,10 +17,7 @@
                 ]
             },
             "args": [
-                "app.main:app",
-                "--reload",
-                "--port",
-                "8000"
+                "--logging=debug"
             ]
         }
     ]

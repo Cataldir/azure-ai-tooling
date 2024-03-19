@@ -11,6 +11,11 @@ httpx = "^0.27.0"
 azure-identity = "^1.15.0"
 azure-keyvault-secrets = "^4.8.0"
 pydantic = "^2.6.4"
+opencensus-ext-azure = "^1.1.13"
+azureml-core = "^1.55.0.post2"
+azure-mgmt-monitor = "^6.0.2"
+azure-monitor-query = "^1.2.1"
+azure-cosmos = "^4.6.0"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -21,6 +26,8 @@ flake8 = "^7.0.0"
 isort = "^5.13.2"
 pytest-asyncio = "^0.23.6"
 python-dotenv = "^1.0.1"
+ipykernel = "^6.29.3"
+poetry-plugin-export = "^1.7.1"
 
 
 [build-system]
