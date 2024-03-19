@@ -16,6 +16,7 @@ key: str = os.environ.get("GPT4V_KEY", "")
 az_monitor: str = os.environ.get("AZ_CONNECTION_LOG", "")
 
 query_generator = QueryGenerator(aoai_url=url, aoai_key=key)
+# query_generator = QueryGenerator(aoai_url=url, aoai_key=key, az_monitor=az_monitor) // If want to enable azure monitor logs
 
 prompt = "Retrieve the information from all products that contains the name 'student' but are not 'student loans'."
 query_type = "CosmosDB NoSQL"
