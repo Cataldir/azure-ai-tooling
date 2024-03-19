@@ -1,0 +1,71 @@
+{
+    "git.confirmSync": true,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "debug.onTaskErrors": "debugAnyway",
+    "cmake.configureOnOpen": true,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "window.zoomLevel": -1,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/**"
+    ],
+    "autoDocstring.includeExtendedSummary": false,
+    "autoDocstring.includeName": false,
+    "autoDocstring.startOnNewLine": true,
+    "python.defaultInterpreterPath": ".venv\\Scripts\\python.exe",
+    "python.autoComplete.extraPaths": [
+    
+    ],
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.fixAll": [],
+    "python.analysis.extraPaths": [],
+    "python.analysis.indexing": false,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.packageIndexDepths": [
+        {
+          "name": "sklearn",
+          "depth": 2
+        },
+        {
+          "name": "matplotlib",
+          "depth": 2
+        },
+        {
+          "name": "scipy",
+          "depth": 2
+        },
+        {
+          "name": "langchain",
+          "depth": 2
+        },
+        {
+          "name": "fastapi",
+          "depth": 2
+        },
+        {
+          "name": "asyncpg",
+          "depth": 1
+        },
+        {
+          "name": "motor",
+          "depth": 1
+        }
+      ],
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "docwriter.style": "Auto-detect",
+    "docwriter.progress.trackClasses": true,
+    "wolf.disableHotModeWarning": true,
+    "terminal.integrated.env.windows": {
+      "PYTHONPATH": "${workspaceFolder}/src",
+    },
+    "search.useIgnoreFiles": true,
+    "appService.defaultWebAppToDeploy": "None"
+}
