@@ -67,5 +67,12 @@
       "PYTHONPATH": "${workspaceFolder}/src",
     },
     "search.useIgnoreFiles": true,
-    "appService.defaultWebAppToDeploy": "None"
+    "appService.defaultWebAppToDeploy": "None",
+    "azureFunctions.deploySubpath": "src\\tools\\research",
+    "azureFunctions.scmDoBuildDuringDeployment": true,
+    "azureFunctions.pythonVenv": ".venv",
+    "azureFunctions.projectLanguage": "Python",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureFunctions.projectLanguageModel": 2
 }

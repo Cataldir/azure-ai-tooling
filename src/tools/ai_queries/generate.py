@@ -20,7 +20,13 @@ class QueryGenerator:
     """
     _summary_: This class is a query generator using Azure OpenAI Service.
     """
-    def __init__(self, aoai_url: str, aoai_key: str, system_message: Optional[str] = None, az_monitor: Optional[str] = None) -> None:
+    def __init__(
+            self,
+            aoai_url: str,
+            aoai_key: str,
+            system_message: Optional[str] = None,
+            az_monitor: Optional[str] = None
+        ) -> None:
         self.aoai_url = aoai_url
         self.aoai_headers = {
             "Content-Type": "application/json",

@@ -16,6 +16,13 @@ azureml-core = "^1.55.0.post2"
 azure-mgmt-monitor = "^6.0.2"
 azure-monitor-query = "^1.2.1"
 azure-cosmos = "^4.6.0"
+azure-storage-blob = "^12.19.1"
+langchain = "^0.1.12"
+azure-search-documents = "^11.4.0"
+faker = "^24.3.0"
+azure-functions = "^1.18.0"
+langchain-community = "^0.0.29"
+beautifulsoup4 = "^4.12.3"
 
 
 [tool.poetry.group.dev.dependencies]
