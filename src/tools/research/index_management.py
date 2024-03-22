@@ -21,7 +21,7 @@ logger.setLevel(logging.DEBUG)
 async def create_or_update_search_index(
     endpoint: str,
     api_key: str,
-    index_name: Optional[str] = "claro-bing-search-index"
+    index_name: Optional[str] = "some-search-index"
 ):
 
     credential = AzureKeyCredential(api_key)
