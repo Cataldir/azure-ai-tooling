@@ -1,0 +1,31 @@
+from typing import List
+from .schemas import AzureDevOpsWorkItemSchema, AzureDevOpsSystemSchema
+
+
+def parse_work_items(work_items) -> List[AzureDevOpsWorkItemSchema]:
+    formatted_work_items = []
+
+    for work_item in work_items:
+        fields = work_item.get("fields", None)
+        if not fields:
+            pass
+        elif not isinstance(fields, dict):
+            pass
+        system_fields = AzureDevOpsSystemSchema(
+            changed_date = fields.get("System.ChangedDate", ""),
+            title = fields.get("System.Title", ""),
+            work_item_type = fields.get("System.WorkItemType", ""),
+            state = fields.get("System.State", ""),
+            reason = fields.get("System.Reason", ""),
+            description = fields.get("System.Description", None),
+            assigned_to = fields.get("System.AssignedTo", {}).get("displayName", "")
+        )
+
+        formatted_work_item = AzureDevOpsWorkItemSchema(
+            id = str(work_item.get("id")),
+            system=system_fields,
+            custom=custom_fields
+        )
+
+        formatted_work_items.append(formatted_work_item)
+    return formatted_work_items

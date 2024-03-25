@@ -155,3 +155,9 @@ cython_debug/
 # Added by cargo
 
 /target
+
+# Specific to Repo
+ado_mapping.py
+custom_schemas.py
+src/tools/video_summarization/
+sample.json

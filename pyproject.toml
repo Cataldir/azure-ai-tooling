@@ -23,13 +23,15 @@ faker = "^24.3.0"
 azure-functions = "^1.18.0"
 langchain-community = "^0.0.29"
 beautifulsoup4 = "^4.12.3"
+moviepy = "^1.0.3"
+azure-cognitiveservices-speech = "^1.36.0"
+azure-devops = "^7.1.0b4"
 
 
 [tool.poetry.group.dev.dependencies]
 pylint = "^2.15.9"
 black = "^22.12.0"
 pytest = "^7.4.3"
-flake8 = "^7.0.0"
 isort = "^5.13.2"
 pytest-asyncio = "^0.23.6"
 python-dotenv = "^1.0.1"
@@ -42,11 +44,6 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 
-[virtualenvs]
-create = true
-in-project = true
-
-
 [tool.pytest.ini_options]
 minversion = "7.0"
 addopts = "-ra -q -s"
@@ -54,38 +51,23 @@ testpaths = ["tools",]
 python_files = ["test_*.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
-markers = [
-    "async: marks tests as async (select with '-m async')",
-]
+markers = ["async: marks tests as async (select with '-m async')", "slow: marks tests as slow (select with '-m slow')"]
 
 
 [tool.pylint]
-good-names = ["i", "j", "k", "ex", "Run", "_"]
-max-line-length = 75
-disable = [
-    "C0114", # missing-module-docstring
-    "C0115", # missing-class-docstring
-    "C0116", # missing-function-docstring
-]
 fail-under = 8.5
+max-line-length = 100
+max-complexity=10
+good-names = ["i", "j", "k", "ex", "Run", "_"]
+disable = ["C0114", "C0115", "C0116", "C0301", "W3101"]
+load-plugins = ["pylint.extensions.mccabe", ]
 
 
 [tool.black]
-line-length = 75
+line-length = 100
+target-version = ['py310', 'py311']
 include = '\.pyi?$'
-exclude = '''
-/(
-    \.git
-  | \.hg
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | _build
-  | buck-out
-  | build
-  | dist
-)/
-'''
+exclude = '(\.git | \.hg | \.mypy_cache | \.tox | \.venv | _build | buck-out | build | dist )/'
 
 
 [tool.isort]
@@ -94,18 +76,4 @@ multi_line_output = 3
 include_trailing_comma = true
 force_grid_wrap = 0
 use_parentheses = true
-line_length = 75
-
-
-[tool.flake8]
-max-complexity = 10
-max-line-length = 75
-ignore = ["E203", "E266", "E501", "W503"]
-exclude = [
-    ".venv",
-    ".logs",
-    ".git",
-    "__pycache__",
-    "build",
-    "dist"
-]
+line_length = 100

@@ -21,6 +21,22 @@
             ]
         },
         {
+            "name": "Python: ADO Tools",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}\\src\\tools\\ado.py",
+            "justMyCode": false,
+            "autoReload": {
+                "enable": true,
+                "pattern": [
+                    "**/*.py"
+                ]
+            },
+            "args": [
+                "--logging=debug"
+            ]
+        },
+        {
             "name": "Attach to Python Functions",
             "type": "python",
             "request": "attach",

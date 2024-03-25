@@ -15,9 +15,6 @@
     "autoDocstring.includeName": false,
     "autoDocstring.startOnNewLine": true,
     "python.defaultInterpreterPath": ".venv\\Scripts\\python.exe",
-    "python.autoComplete.extraPaths": [
-    
-    ],
     "python.analysis.autoImportCompletions": true,
     "python.analysis.completeFunctionParens": true,
     "python.analysis.diagnosticMode": "workspace",
@@ -57,6 +54,9 @@
       ],
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.variableTypes": true,
+    "pylint.args": ["--rcfile=${workspaceFolder}/pyproject.toml"],
+    "black-formatter.args": ["--config ${workspaceFolder}/pyproject.toml"],
+    //"isort.args": [],
     "[python]": {
         "editor.formatOnType": true
     },
