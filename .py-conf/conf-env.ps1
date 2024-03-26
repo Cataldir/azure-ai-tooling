@@ -17,3 +17,7 @@ ExecuteCommand $command
 # Select Python 3.10 as the package version
 $command = "poetry env use python3.11"
 ExecuteCommand $command
+
+# Select Python 3.10 as the package version
+$command = "poetry install"
+ExecuteCommand $command

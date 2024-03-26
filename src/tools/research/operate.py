@@ -22,6 +22,7 @@ logger.setLevel(logging.DEBUG)
 
 
 class SearchEngine:
+
     def __init__(
         self,
         schema: SourceEngineSchema,
