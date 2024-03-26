@@ -1325,22 +1325,6 @@ testing = ["covdefaults (>=2.3)", "coverage (>=7.3.2)", "diff-cover (>=8)", "pyt
 typing = ["typing-extensions (>=4.8)"]
 
 [[package]]
-name = "flake8"
-version = "7.0.0"
-description = "the modular source code checker: pep8 pyflakes and co"
-optional = false
-python-versions = ">=3.8.1"
-files = [
-    {file = "flake8-7.0.0-py2.py3-none-any.whl", hash = "sha256:a6dfbb75e03252917f2473ea9653f7cd799c3064e54d4c8140044c5c065f53c3"},
-    {file = "flake8-7.0.0.tar.gz", hash = "sha256:33f96621059e65eec474169085dc92bf26e7b2d47366b70be2f67ab80dc25132"},
-]
-
-[package.dependencies]
-mccabe = ">=0.7.0,<0.8.0"
-pycodestyle = ">=2.11.0,<2.12.0"
-pyflakes = ">=3.2.0,<3.3.0"
-
-[[package]]
 name = "frozenlist"
 version = "1.4.1"
 description = "A list-like structure which implements collections.abc.MutableSequence"
@@ -2601,6 +2585,26 @@ signals = ["blinker (>=1.4.0)"]
 signedtoken = ["cryptography (>=3.0.0)", "pyjwt (>=2.0.0,<3)"]
 
 [[package]]
+name = "office365-rest-python-client"
+version = "2.5.6"
+description = "Microsoft 365 & Microsoft Graph Library for Python"
+optional = false
+python-versions = "*"
+files = [
+    {file = "Office365-REST-Python-Client-2.5.6.tar.gz", hash = "sha256:84416d55bf21d86b586438418ddea24facbc01ebaa75777ee51988e45248d75b"},
+    {file = "Office365_REST_Python_Client-2.5.6-py3-none-any.whl", hash = "sha256:4d539de25d46b7f55a13e635350aaf3050fb0c45b1714f5b43dad972c01e2db9"},
+]
+
+[package.dependencies]
+msal = "*"
+pytz = "*"
+requests = "*"
+typing-extensions = ">=4.0.0"
+
+[package.extras]
+ntlmprovider = ["requests-ntlm"]
+
+[[package]]
 name = "opencensus"
 version = "0.11.4"
 description = "A stats collection and distributed tracing framework"
@@ -3112,17 +3116,6 @@ files = [
 pyasn1 = ">=0.4.6,<0.6.0"
 
 [[package]]
-name = "pycodestyle"
-version = "2.11.1"
-description = "Python style guide checker"
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "pycodestyle-2.11.1-py2.py3-none-any.whl", hash = "sha256:44fe31000b2d866f2e41841b18528a505fbd7fef9017b04eff4e2648a0fadc67"},
-    {file = "pycodestyle-2.11.1.tar.gz", hash = "sha256:41ba0e7afc9752dfb53ced5489e89f8186be00e599e712660695b7a75ff2663f"},
-]
-
-[[package]]
 name = "pycparser"
 version = "2.21"
 description = "C parser in Python"
@@ -3242,17 +3235,6 @@ files = [
 
 [package.dependencies]
 typing-extensions = ">=4.6.0,<4.7.0 || >4.7.0"
-
-[[package]]
-name = "pyflakes"
-version = "3.2.0"
-description = "passive checker of Python programs"
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "pyflakes-3.2.0-py2.py3-none-any.whl", hash = "sha256:84b5be138a2dfbb40689ca07e2152deb896a65c3a3e24c251c5c62489568074a"},
-    {file = "pyflakes-3.2.0.tar.gz", hash = "sha256:1c61603ff154621fb2a9172037d84dca3500def8c8b630657d1701f026f8af3f"},
-]
 
 [[package]]
 name = "pygments"
@@ -4470,4 +4452,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "35d00b3526e5ed7e3c60b17f955ba9821ab1140f226eb6deda8b8fb5046bdf52"
+content-hash = "c68f489039d9138bf0e1b05f0b1047e85172c931f70f410a604e5e9b54a05e6a"

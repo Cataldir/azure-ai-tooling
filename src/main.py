@@ -11,7 +11,7 @@ from tools.ai_queries.generate import QueryGenerator
 from tools.indexing.index_manager import add_data_to_index
 from tools.research.index_management import create_or_update_search_index
 from tools.research.operate import SearchEngine, SourceEngineSchema
-from tools.ado_analytics.ado import AzureDevOpsExtractor
+from tools.data_ingestion.ado_analytics.ado import AzureDevOpsExtractor
 
 
 logger = logging.getLogger()
@@ -40,6 +40,7 @@ class TestRoutinesHook:
             "table_name": "products",
             "fields": ["product_name", "product_description"],
         }
+
         parameters = {
             "temperature": 0.7,
             "top_p": 0.95,
@@ -84,7 +85,9 @@ class TestRoutinesHook:
         api_key = os.environ.get("API_KEY_AI_SEARCH", "")
         index_name = "some-search-index"
         index = await create_or_update_search_index(
-            endpoint=endpoint, api_key=api_key, index_name=index_name
+            endpoint=endpoint,
+            api_key=api_key,
+            index_name=index_name
         )
 
         search_result = search_engine.retrieve_data()

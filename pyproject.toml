@@ -26,6 +26,7 @@ beautifulsoup4 = "^4.12.3"
 moviepy = "^1.0.3"
 azure-cognitiveservices-speech = "^1.36.0"
 azure-devops = "^7.1.0b4"
+office365-rest-python-client = "^2.5.6"
 
 
 [tool.poetry.group.dev.dependencies]
